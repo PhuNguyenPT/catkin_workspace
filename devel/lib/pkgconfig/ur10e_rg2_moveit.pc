@@ -1,8 +1,0 @@
-prefix=/home/phu/catkin_ws/devel
-
-Name: ur10e_rg2_moveit
-Description: Description of ur10e_rg2_moveit
-Version: 0.3.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
