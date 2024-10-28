@@ -1,0 +1,18 @@
+[submodule "src/roboticsgroup_upatras_gazebo_plugins"]
+	path = src/roboticsgroup_upatras_gazebo_plugins
+	url = https://github.com/PhuNguyenPT/roboticsgroup_upatras_gazebo_plugins.git
+[submodule "src/ROS-TCP-Endpoint"]
+	path = src/ROS-TCP-Endpoint
+	url = https://github.com/PhuNguyenPT/ROS-TCP-Endpoint.git
+[submodule "src/universal_robot"]
+	path = src/universal_robot
+	url = https://github.com/PhuNguyenPT/universal_robot.git
+[submodule "src/ur_msgs"]
+	path = src/ur_msgs
+	url = https://github.com/PhuNguyenPT/ur_msgs.git
+[submodule "src/onrobot"]
+	path = src/onrobot
+	url = https://github.com/takuya-ki/onrobot.git
+[submodule "src/moveit_msgs"]
+	path = src/moveit_msgs
+	url = https://github.com/PhuNguyenPT/moveit_msgs.git

@@ -1,0 +1,8 @@
+prefix=/home/phu/catkin_ws/devel
+
+Name: ur10e_rg2
+Description: Description of ur10e_rg2
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
