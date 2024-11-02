@@ -12,7 +12,7 @@
 	url = https://github.com/PhuNguyenPT/ur_msgs.git
 [submodule "src/onrobot"]
 	path = src/onrobot
-	url = https://github.com/takuya-ki/onrobot.git
+	url = https://github.com/PhuNguyenPT/onrobot.git
 [submodule "src/moveit_msgs"]
 	path = src/moveit_msgs
 	url = https://github.com/PhuNguyenPT/moveit_msgs.git
