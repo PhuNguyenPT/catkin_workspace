@@ -1,0 +1,5 @@
+universal_robot/ur20_moveit_config
+/home/phu/catkin_workspace/devel/.private/ur20_moveit_config/cmake.lock /home/phu/catkin_workspace/devel/./cmake.lock
+/home/phu/catkin_workspace/devel/.private/ur20_moveit_config/lib/pkgconfig/ur20_moveit_config.pc /home/phu/catkin_workspace/devel/lib/pkgconfig/ur20_moveit_config.pc
+/home/phu/catkin_workspace/devel/.private/ur20_moveit_config/share/ur20_moveit_config/cmake/ur20_moveit_configConfig.cmake /home/phu/catkin_workspace/devel/share/ur20_moveit_config/cmake/ur20_moveit_configConfig.cmake
+/home/phu/catkin_workspace/devel/.private/ur20_moveit_config/share/ur20_moveit_config/cmake/ur20_moveit_configConfig-version.cmake /home/phu/catkin_workspace/devel/share/ur20_moveit_config/cmake/ur20_moveit_configConfig-version.cmake
