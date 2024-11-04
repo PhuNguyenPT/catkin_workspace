@@ -5,8 +5,8 @@
   <description>
      An automatically generated package with all the configuration and launch files for using the ur10e_rg2 with the MoveIt Motion Planning Framework
   </description>
-  <author email="phu.npt01@gmail.com">Phu Nguyen</author>
-  <maintainer email="phu.npt01@gmail.com">Phu Nguyen</maintainer>
+  <author email="phu.npt01@gmail.com">phunpt</author>
+  <maintainer email="phu.npt01@gmail.com">phunpt</maintainer>
 
   <license>BSD</license>
 
