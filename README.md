@@ -14,11 +14,26 @@ Make sure your system is ready for ROS Noetic. Check the official installation g
 
 ## Installation
 
-### Step 1: Install ROS Noetic
+### Step 1: Install Submodules
+
+Git clone submodules
+
+```bash
+cd ~/catkin_workspace/src
+git clone https://github.com/PhuNguyenPT/roboticsgroup_upatras_gazebo_plugins.git
+git clone https://github.com/PhuNguyenPT/ROS-TCP-Endpoint.git
+git clone https://github.com/PhuNguyenPT/universal_robot.git
+git clone https://github.com/PhuNguyenPT/ur_msgs.git
+git clone https://github.com/PhuNguyenPT/moveit_msgs.git
+```
+
+### Step 2: Install ROS Noetic
 
 Follow the [official ROS installation guide](https://wiki.ros.org/noetic/Installation/Ubuntu) to install ROS Noetic. 
 
 Ensure you run the following command after installation to source ROS properly:
 
 ```bash
+cd ~/catkin_workspace
 source /opt/ros/noetic/setup.bash && catkin_make
+```
