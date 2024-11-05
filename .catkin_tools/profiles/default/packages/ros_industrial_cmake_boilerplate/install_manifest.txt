@@ -1,9 +1,0 @@
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ros_industrial_cmake_boilerplate/package.xml
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/ros_industrial_cmake_boilerplate-config.cmake
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/ros_industrial_cmake_boilerplate-config-version.cmake
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ament_index/resource_index/packages/ros_industrial_cmake_boilerplate
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ros_industrial_cmake_boilerplate/hook/ament_prefix_path.dsv
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ros_industrial_cmake_boilerplate/hook/ros_package_path.dsv
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/cmake_tools.cmake
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/code_coverage.cmake
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/extract_package_metadata.cmake

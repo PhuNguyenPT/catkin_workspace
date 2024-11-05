@@ -1,5 +1,0 @@
-onrobot/onrobot_rg_gazebo
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/onrobot_rg_gazebo/cmake.lock /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/./cmake.lock
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/onrobot_rg_gazebo/share/onrobot_rg_gazebo/cmake/onrobot_rg_gazeboConfig.cmake /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/onrobot_rg_gazebo/cmake/onrobot_rg_gazeboConfig.cmake
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/onrobot_rg_gazebo/share/onrobot_rg_gazebo/cmake/onrobot_rg_gazeboConfig-version.cmake /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/onrobot_rg_gazebo/cmake/onrobot_rg_gazeboConfig-version.cmake
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/onrobot_rg_gazebo/lib/pkgconfig/onrobot_rg_gazebo.pc /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/pkgconfig/onrobot_rg_gazebo.pc
