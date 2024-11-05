@@ -6,4 +6,3 @@ src/stomp/
 src/stomp_ros/
 src/.rosinstall
 src/.rosinstall.bak
-.catkin_tools/
