@@ -1,9 +1,0 @@
-[  0%] Built target _onrobot_vg_control_generate_messages_check_deps_OnRobotVGOutput
-[  0%] Built target _onrobot_vg_control_generate_messages_check_deps_OnRobotVGInput
-[  0%] Built target _onrobot_vg_control_generate_messages_check_deps_SetCommand
-[ 22%] Built target onrobot_vg_control_generate_messages_eus
-[ 50%] Built target onrobot_vg_control_generate_messages_py
-[ 66%] Built target onrobot_vg_control_generate_messages_nodejs
-[100%] Built target onrobot_vg_control_generate_messages_cpp
-[100%] Built target onrobot_vg_control_generate_messages_lisp
-[100%] Built target onrobot_vg_control_generate_messages
