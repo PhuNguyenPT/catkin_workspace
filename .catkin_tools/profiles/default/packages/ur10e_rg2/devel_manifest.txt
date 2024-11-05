@@ -1,5 +1,0 @@
-ur10e_rg2
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/ur10e_rg2/cmake.lock /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/./cmake.lock
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/ur10e_rg2/share/ur10e_rg2/cmake/ur10e_rg2Config.cmake /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ur10e_rg2/cmake/ur10e_rg2Config.cmake
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/ur10e_rg2/share/ur10e_rg2/cmake/ur10e_rg2Config-version.cmake /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ur10e_rg2/cmake/ur10e_rg2Config-version.cmake
-/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/ur10e_rg2/lib/pkgconfig/ur10e_rg2.pc /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/pkgconfig/ur10e_rg2.pc
