@@ -1,6 +1,6 @@
 # Catkin Workspace
 
-This project sets up a ROS Noetic workspace using `catkin_make`. Follow the instructions below to install ROS Noetic and configure your workspace.
+This project sets up a ROS Noetic workspace using `catkin build`. Follow the instructions below to install ROS Noetic and configure your workspace.
 
 ## Prerequisites
 
