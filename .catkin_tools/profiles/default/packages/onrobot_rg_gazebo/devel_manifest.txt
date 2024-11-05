@@ -1,5 +1,0 @@
-onrobot/onrobot_rg_gazebo
-/home/devlab/demo/catkin_workspace/devel/.private/onrobot_rg_gazebo/cmake.lock /home/devlab/demo/catkin_workspace/devel/./cmake.lock
-/home/devlab/demo/catkin_workspace/devel/.private/onrobot_rg_gazebo/lib/pkgconfig/onrobot_rg_gazebo.pc /home/devlab/demo/catkin_workspace/devel/lib/pkgconfig/onrobot_rg_gazebo.pc
-/home/devlab/demo/catkin_workspace/devel/.private/onrobot_rg_gazebo/share/onrobot_rg_gazebo/cmake/onrobot_rg_gazeboConfig.cmake /home/devlab/demo/catkin_workspace/devel/share/onrobot_rg_gazebo/cmake/onrobot_rg_gazeboConfig.cmake
-/home/devlab/demo/catkin_workspace/devel/.private/onrobot_rg_gazebo/share/onrobot_rg_gazebo/cmake/onrobot_rg_gazeboConfig-version.cmake /home/devlab/demo/catkin_workspace/devel/share/onrobot_rg_gazebo/cmake/onrobot_rg_gazeboConfig-version.cmake

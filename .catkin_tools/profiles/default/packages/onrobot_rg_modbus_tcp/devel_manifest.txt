@@ -1,6 +1,0 @@
-onrobot/onrobot_rg_modbus_tcp
-/home/devlab/demo/catkin_workspace/devel/.private/onrobot_rg_modbus_tcp/cmake.lock /home/devlab/demo/catkin_workspace/devel/./cmake.lock
-/home/devlab/demo/catkin_workspace/devel/.private/onrobot_rg_modbus_tcp/lib/python3/dist-packages/onrobot_rg_modbus_tcp/__init__.py /home/devlab/demo/catkin_workspace/devel/lib/python3/dist-packages/onrobot_rg_modbus_tcp/__init__.py
-/home/devlab/demo/catkin_workspace/devel/.private/onrobot_rg_modbus_tcp/lib/pkgconfig/onrobot_rg_modbus_tcp.pc /home/devlab/demo/catkin_workspace/devel/lib/pkgconfig/onrobot_rg_modbus_tcp.pc
-/home/devlab/demo/catkin_workspace/devel/.private/onrobot_rg_modbus_tcp/share/onrobot_rg_modbus_tcp/cmake/onrobot_rg_modbus_tcpConfig.cmake /home/devlab/demo/catkin_workspace/devel/share/onrobot_rg_modbus_tcp/cmake/onrobot_rg_modbus_tcpConfig.cmake
-/home/devlab/demo/catkin_workspace/devel/.private/onrobot_rg_modbus_tcp/share/onrobot_rg_modbus_tcp/cmake/onrobot_rg_modbus_tcpConfig-version.cmake /home/devlab/demo/catkin_workspace/devel/share/onrobot_rg_modbus_tcp/cmake/onrobot_rg_modbus_tcpConfig-version.cmake
