@@ -35,5 +35,12 @@ Ensure you run the following command after installation to source ROS properly:
 
 ```bash
 cd ~/catkin_workspace
-source /opt/ros/noetic/setup.bash && catkin_make
+source /opt/ros/noetic/setup.bash
+```
+
+### Step 2: Install catkin tools and build
+
+```bash
+pip3 install --user git+https://github.com/catkin/catkin_tools.git
+catkin build
 ```
