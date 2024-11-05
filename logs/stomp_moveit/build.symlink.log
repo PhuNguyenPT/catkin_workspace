@@ -1,10 +1,10 @@
-Linked: (/home/phu/catkin_workspace/devel/.private/stomp_moveit/lib/libstomp_moveit_smoothing_adapter.so, /home/phu/catkin_workspace/devel/lib/libstomp_moveit_smoothing_adapter.so)
-Linked: (/home/phu/catkin_workspace/devel/.private/stomp_moveit/lib/libstomp_moveit_update_filters.so, /home/phu/catkin_workspace/devel/lib/libstomp_moveit_update_filters.so)
-Linked: (/home/phu/catkin_workspace/devel/.private/stomp_moveit/lib/libstomp_moveit_planner_manager.so, /home/phu/catkin_workspace/devel/lib/libstomp_moveit_planner_manager.so)
-Linked: (/home/phu/catkin_workspace/devel/.private/stomp_moveit/lib/libstomp_moveit_noisy_filters.so, /home/phu/catkin_workspace/devel/lib/libstomp_moveit_noisy_filters.so)
-Linked: (/home/phu/catkin_workspace/devel/.private/stomp_moveit/lib/libstomp_moveit_noise_generators.so, /home/phu/catkin_workspace/devel/lib/libstomp_moveit_noise_generators.so)
-Linked: (/home/phu/catkin_workspace/devel/.private/stomp_moveit/lib/libstomp_moveit.so, /home/phu/catkin_workspace/devel/lib/libstomp_moveit.so)
-Linked: (/home/phu/catkin_workspace/devel/.private/stomp_moveit/lib/libstomp_moveit_cost_functions.so, /home/phu/catkin_workspace/devel/lib/libstomp_moveit_cost_functions.so)
-Linked: (/home/phu/catkin_workspace/devel/.private/stomp_moveit/lib/pkgconfig/stomp_moveit.pc, /home/phu/catkin_workspace/devel/lib/pkgconfig/stomp_moveit.pc)
-Linked: (/home/phu/catkin_workspace/devel/.private/stomp_moveit/share/stomp_moveit/cmake/stomp_moveitConfig.cmake, /home/phu/catkin_workspace/devel/share/stomp_moveit/cmake/stomp_moveitConfig.cmake)
-Linked: (/home/phu/catkin_workspace/devel/.private/stomp_moveit/share/stomp_moveit/cmake/stomp_moveitConfig-version.cmake, /home/phu/catkin_workspace/devel/share/stomp_moveit/cmake/stomp_moveitConfig-version.cmake)
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/stomp_moveit/cmake/stomp_moveitConfig-version.cmake
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/stomp_moveit/cmake/stomp_moveitConfig.cmake
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/libstomp_moveit_noise_generators.so
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/libstomp_moveit.so
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/libstomp_moveit_noisy_filters.so
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/libstomp_moveit_update_filters.so
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/libstomp_moveit_smoothing_adapter.so
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/libstomp_moveit_planner_manager.so
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/libstomp_moveit_cost_functions.so
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/pkgconfig/stomp_moveit.pc

@@ -1,3 +1,3 @@
-Symlinking /home/phu/catkin_workspace/devel/lib/pkgconfig/ur3_moveit_config.pc
-Symlinking /home/phu/catkin_workspace/devel/share/ur3_moveit_config/cmake/ur3_moveit_configConfig.cmake
-Symlinking /home/phu/catkin_workspace/devel/share/ur3_moveit_config/cmake/ur3_moveit_configConfig-version.cmake
+Linked: (/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/ur3_moveit_config/share/ur3_moveit_config/cmake/ur3_moveit_configConfig-version.cmake, /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ur3_moveit_config/cmake/ur3_moveit_configConfig-version.cmake)
+Linked: (/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/ur3_moveit_config/share/ur3_moveit_config/cmake/ur3_moveit_configConfig.cmake, /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ur3_moveit_config/cmake/ur3_moveit_configConfig.cmake)
+Linked: (/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/ur3_moveit_config/lib/pkgconfig/ur3_moveit_config.pc, /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/pkgconfig/ur3_moveit_config.pc)

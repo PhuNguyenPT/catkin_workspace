@@ -2,18 +2,18 @@
 [100%] Built target stomp_example
 [36mInstall the project...[0m
 -- Install configuration: ""
--- Installing: /home/phu/catkin_workspace/devel/share/stomp/package.xml
--- Installing: /home/phu/catkin_workspace/devel/lib/libstomp.so
--- Installing: /home/phu/catkin_workspace/devel/bin/stomp_example
--- Set runtime path of "/home/phu/catkin_workspace/devel/bin/stomp_example" to ""
--- Installing: /home/phu/catkin_workspace/devel/lib/cmake/stomp/stomp-targets.cmake
--- Installing: /home/phu/catkin_workspace/devel/lib/cmake/stomp/stomp-targets-noconfig.cmake
--- Installing: /home/phu/catkin_workspace/devel/lib/cmake/stomp/stomp-config.cmake
--- Installing: /home/phu/catkin_workspace/devel/lib/cmake/stomp/stomp-config-version.cmake
--- Installing: /home/phu/catkin_workspace/devel/share/ament_index/resource_index/packages/stomp
--- Installing: /home/phu/catkin_workspace/devel/share/stomp/hook/ament_prefix_path.dsv
--- Installing: /home/phu/catkin_workspace/devel/share/stomp/hook/ros_package_path.dsv
--- Installing: /home/phu/catkin_workspace/devel/include/stomp
--- Installing: /home/phu/catkin_workspace/devel/include/stomp/stomp.h
--- Installing: /home/phu/catkin_workspace/devel/include/stomp/task.h
--- Installing: /home/phu/catkin_workspace/devel/include/stomp/utils.h
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/stomp/package.xml
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/libstomp.so
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/bin/stomp_example
+-- Set runtime path of "/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/bin/stomp_example" to ""
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/stomp/stomp-targets.cmake
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/stomp/stomp-targets-noconfig.cmake
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/stomp/stomp-config.cmake
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/stomp/stomp-config-version.cmake
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ament_index/resource_index/packages/stomp
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/stomp/hook/ament_prefix_path.dsv
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/stomp/hook/ros_package_path.dsv
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/include/stomp
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/include/stomp/task.h
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/include/stomp/stomp.h
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/include/stomp/utils.h

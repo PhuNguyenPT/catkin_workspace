@@ -1,3 +1,3 @@
-Symlinking /home/phu/catkin_workspace/devel/lib/pkgconfig/ur10e_rg2_moveit.pc
-Symlinking /home/phu/catkin_workspace/devel/share/ur10e_rg2_moveit/cmake/ur10e_rg2_moveitConfig-version.cmake
-Symlinking /home/phu/catkin_workspace/devel/share/ur10e_rg2_moveit/cmake/ur10e_rg2_moveitConfig.cmake
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ur10e_rg2_moveit/cmake/ur10e_rg2_moveitConfig.cmake
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ur10e_rg2_moveit/cmake/ur10e_rg2_moveitConfig-version.cmake
+Symlinking /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/pkgconfig/ur10e_rg2_moveit.pc

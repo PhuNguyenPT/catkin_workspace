@@ -9,6 +9,6 @@
 [ 27%] Built target onrobot_rg_control_generate_messages_py
 [ 44%] Built target onrobot_rg_control_generate_messages_cpp
 [ 66%] Built target onrobot_rg_control_generate_messages_eus
+[ 83%] Built target onrobot_rg_control_generate_messages_lisp
 [100%] Built target onrobot_rg_control_generate_messages_nodejs
-[100%] Built target onrobot_rg_control_generate_messages_lisp
 [100%] Built target onrobot_rg_control_generate_messages

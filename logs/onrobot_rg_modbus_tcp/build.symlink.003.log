@@ -1,4 +1,4 @@
-Symlinking /home/phu/catkin_workspace/devel/lib/pkgconfig/onrobot_rg_modbus_tcp.pc
-Symlinking /home/phu/catkin_workspace/devel/lib/python3/dist-packages/onrobot_rg_modbus_tcp/__init__.py
-Symlinking /home/phu/catkin_workspace/devel/share/onrobot_rg_modbus_tcp/cmake/onrobot_rg_modbus_tcpConfig-version.cmake
-Symlinking /home/phu/catkin_workspace/devel/share/onrobot_rg_modbus_tcp/cmake/onrobot_rg_modbus_tcpConfig.cmake
+Linked: (/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/onrobot_rg_modbus_tcp/share/onrobot_rg_modbus_tcp/cmake/onrobot_rg_modbus_tcpConfig-version.cmake, /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/onrobot_rg_modbus_tcp/cmake/onrobot_rg_modbus_tcpConfig-version.cmake)
+Linked: (/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/onrobot_rg_modbus_tcp/share/onrobot_rg_modbus_tcp/cmake/onrobot_rg_modbus_tcpConfig.cmake, /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/onrobot_rg_modbus_tcp/cmake/onrobot_rg_modbus_tcpConfig.cmake)
+Linked: (/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/onrobot_rg_modbus_tcp/lib/python3/dist-packages/onrobot_rg_modbus_tcp/__init__.py, /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/python3/dist-packages/onrobot_rg_modbus_tcp/__init__.py)
+Linked: (/home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/.private/onrobot_rg_modbus_tcp/lib/pkgconfig/onrobot_rg_modbus_tcp.pc, /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/pkgconfig/onrobot_rg_modbus_tcp.pc)

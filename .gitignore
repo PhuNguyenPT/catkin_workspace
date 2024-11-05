@@ -1,2 +1,7 @@
 build/
 devel/
+src/ros_industrial_cmake_boilerplate
+src/stomp
+src/stomp_ros
+src/.rosinstall
+src/.rosinstall.bak

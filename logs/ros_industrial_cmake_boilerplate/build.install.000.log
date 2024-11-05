@@ -1,11 +1,11 @@
 [36mInstall the project...[0m
 -- Install configuration: ""
--- Installing: /home/phu/catkin_workspace/devel/share/ros_industrial_cmake_boilerplate/package.xml
--- Installing: /home/phu/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/ros_industrial_cmake_boilerplate-config.cmake
--- Installing: /home/phu/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/ros_industrial_cmake_boilerplate-config-version.cmake
--- Installing: /home/phu/catkin_workspace/devel/share/ament_index/resource_index/packages/ros_industrial_cmake_boilerplate
--- Installing: /home/phu/catkin_workspace/devel/share/ros_industrial_cmake_boilerplate/hook/ament_prefix_path.dsv
--- Installing: /home/phu/catkin_workspace/devel/share/ros_industrial_cmake_boilerplate/hook/ros_package_path.dsv
--- Installing: /home/phu/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/cmake_tools.cmake
--- Installing: /home/phu/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/code_coverage.cmake
--- Installing: /home/phu/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/extract_package_metadata.cmake
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ros_industrial_cmake_boilerplate/package.xml
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/ros_industrial_cmake_boilerplate-config.cmake
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/ros_industrial_cmake_boilerplate-config-version.cmake
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ament_index/resource_index/packages/ros_industrial_cmake_boilerplate
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ros_industrial_cmake_boilerplate/hook/ament_prefix_path.dsv
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/share/ros_industrial_cmake_boilerplate/hook/ros_package_path.dsv
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/cmake_tools.cmake
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/code_coverage.cmake
+-- Installing: /home/tossboy/Desktop/Study/Year_4/Winter/Project/Main_Project/catkin_workspace/devel/lib/cmake/ros_industrial_cmake_boilerplate/extract_package_metadata.cmake
