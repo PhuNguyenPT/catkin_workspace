@@ -6,3 +6,5 @@ src/stomp/
 src/stomp_ros/
 src/.rosinstall
 src/.rosinstall.bak
+managed_context/
+.catkin_tools/
