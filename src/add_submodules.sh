@@ -8,7 +8,9 @@ declare -A REPOS=(
   ["roboticsgroup_upatras_gazebo_plugins"]="https://github.com/PhuNguyenPT/roboticsgroup_upatras_gazebo_plugins.git"
   ["universal_robot"]="https://github.com/PhuNguyenPT/universal_robot.git"
   ["ur_msgs"]="https://github.com/PhuNguyenPT/ur_msgs.git",
-  ["ros_industrial_cmake_boilerplate"]="https://github.com/PhuNguyenPT/ros_industrial_cmake_boilerplate.git"
+  ["ros_industrial_cmake_boilerplate"]="https://github.com/PhuNguyenPT/ros_industrial_cmake_boilerplate.git",
+  ["stomp"]="https://github.com/PhuNguyenPT/stomp.git",
+  ["stomp_ros"]="https://github.com/PhuNguyenPT/stomp_ros.git"
 )
 
 # Loop through each repository to add as a submodule

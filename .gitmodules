@@ -18,4 +18,10 @@
 	url = https://github.com/PhuNguyenPT/moveit_msgs.git
 [submodule "src/ros_industrial_cmake_boilerplate"]
 	path = src/ros_industrial_cmake_boilerplate
-	url = https://github.com/PhuNguyenPT/ros_industrial_cmake_boilerplate.git
+	url = https://github.com/PhuNguyenPT/ros_industrial_cmake_boilerplate.git,
+[submodule "src/stomp_ros"]
+	path = src/stomp_ros
+	url = https://github.com/PhuNguyenPT/stomp_ros.git
+[submodule "src/stomp"]
+	path = src/stomp
+	url = https://github.com/PhuNguyenPT/stomp.git,
