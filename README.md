@@ -22,6 +22,7 @@ Git clone submodules
 cd ~/catkin_workspace/src
 git clone https://github.com/PhuNguyenPT/roboticsgroup_upatras_gazebo_plugins.git
 git clone https://github.com/PhuNguyenPT/ROS-TCP-Endpoint.git
+git clone https://github.com/PhuNguyenPT/onrobot.git
 git clone https://github.com/PhuNguyenPT/universal_robot.git
 git clone https://github.com/PhuNguyenPT/ur_msgs.git
 git clone https://github.com/PhuNguyenPT/moveit_msgs.git
