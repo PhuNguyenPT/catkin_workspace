@@ -25,6 +25,9 @@ git clone https://github.com/PhuNguyenPT/ROS-TCP-Endpoint.git
 git clone https://github.com/PhuNguyenPT/universal_robot.git
 git clone https://github.com/PhuNguyenPT/ur_msgs.git
 git clone https://github.com/PhuNguyenPT/moveit_msgs.git
+git clone https://github.com/PhuNguyenPT/ros_industrial_cmake_boilerplate.git
+git clone https://github.com/PhuNguyenPT/stomp.git
+git clone https://github.com/PhuNguyenPT/stomp_ros.git
 ```
 
 ### Step 2: Install ROS Noetic
