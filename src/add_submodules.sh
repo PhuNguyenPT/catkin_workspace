@@ -20,7 +20,7 @@ for repo in "${!REPOS[@]}"; do
   # Check if the repo already exists as a submodule
   if [ -d "$repo" ]; then
     echo "Removing existing repository at '$repo' from the index."
-    git rm -f --cached "$repo"  # Forcefully remove from the index
+    git rm -rf --cached "$repo"  # Forcefully remove from the index
   fi
   
   # Add the repository as a submodule
