@@ -6,11 +6,15 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   geometry_msgs
   moveit_msgs
+<<<<<<< HEAD
   ros_tcp_endpoint
   message_generation
   controller_manager
   roslaunch
   trajectory_msgs
+=======
+  message_generation
+>>>>>>> 05df019d9a56448a206d9998185cc498bbc5d132
 )
 
 ## Declare ROS messages
@@ -19,7 +23,10 @@ add_message_files(
   Ur10eMoveitJoints.msg
   Ur10eTrajectory.msg
 )
+<<<<<<< HEAD
 add_service_files(DIRECTORY srv)
+=======
+>>>>>>> 05df019d9a56448a206d9998185cc498bbc5d132
 
 ## Generate added messages
 generate_messages(
@@ -33,6 +40,7 @@ generate_messages(
 catkin_package(
   CATKIN_DEPENDS message_runtime
 )
+<<<<<<< HEAD
 
 catkin_install_python(PROGRAMS
   script/mover.py
@@ -40,6 +48,8 @@ catkin_install_python(PROGRAMS
   script/sim_real_pnp.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+=======
+>>>>>>> 05df019d9a56448a206d9998185cc498bbc5d132
 
 install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   PATTERN "setup_assistant.launch" EXCLUDE)

@@ -8,4 +8,8 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: phunpt
     author_email: phu.npt01@gmail.com
+<<<<<<< HEAD
     generated_timestamp: 1736378029
+=======
+    generated_timestamp: 1731302463
+>>>>>>> 05df019d9a56448a206d9998185cc498bbc5d132

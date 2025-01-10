@@ -1,6 +1,0 @@
-ROS-TCP-Endpoint
-/home/devlab/demo/catkin_workspace/devel/.private/ros_tcp_endpoint/cmake.lock /home/devlab/demo/catkin_workspace/devel/./cmake.lock
-/home/devlab/demo/catkin_workspace/devel/.private/ros_tcp_endpoint/lib/python3/dist-packages/ros_tcp_endpoint/__init__.py /home/devlab/demo/catkin_workspace/devel/lib/python3/dist-packages/ros_tcp_endpoint/__init__.py
-/home/devlab/demo/catkin_workspace/devel/.private/ros_tcp_endpoint/lib/pkgconfig/ros_tcp_endpoint.pc /home/devlab/demo/catkin_workspace/devel/lib/pkgconfig/ros_tcp_endpoint.pc
-/home/devlab/demo/catkin_workspace/devel/.private/ros_tcp_endpoint/share/ros_tcp_endpoint/cmake/ros_tcp_endpointConfig-version.cmake /home/devlab/demo/catkin_workspace/devel/share/ros_tcp_endpoint/cmake/ros_tcp_endpointConfig-version.cmake
-/home/devlab/demo/catkin_workspace/devel/.private/ros_tcp_endpoint/share/ros_tcp_endpoint/cmake/ros_tcp_endpointConfig.cmake /home/devlab/demo/catkin_workspace/devel/share/ros_tcp_endpoint/cmake/ros_tcp_endpointConfig.cmake

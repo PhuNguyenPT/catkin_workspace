@@ -7,8 +7,10 @@ declare -A REPOS=(
   ["onrobot"]="https://github.com/PhuNguyenPT/onrobot.git"
   ["roboticsgroup_upatras_gazebo_plugins"]="https://github.com/PhuNguyenPT/roboticsgroup_upatras_gazebo_plugins.git"
   ["universal_robot"]="https://github.com/PhuNguyenPT/universal_robot.git"
-  ["ur_msgs"]="https://github.com/PhuNguyenPT/ur_msgs.git",
+  ["ur_msgs"]="https://github.com/PhuNguyenPT/ur_msgs.git"
   ["ros_industrial_cmake_boilerplate"]="https://github.com/PhuNguyenPT/ros_industrial_cmake_boilerplate.git"
+  ["stomp"]="https://github.com/PhuNguyenPT/stomp.git"
+  ["stomp_ros"]="https://github.com/PhuNguyenPT/stomp_ros.git"
 )
 
 # Loop through each repository to add as a submodule
@@ -18,7 +20,7 @@ for repo in "${!REPOS[@]}"; do
   # Check if the repo already exists as a submodule
   if [ -d "$repo" ]; then
     echo "Removing existing repository at '$repo' from the index."
-    git rm -f --cached "$repo"  # Forcefully remove from the index
+    git rm -rf --cached "$repo"  # Forcefully remove from the index
   fi
   
   # Add the repository as a submodule

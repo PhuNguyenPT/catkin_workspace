@@ -1,2 +1,0 @@
-onrobot/onrobot
-/home/devlab/demo/catkin_workspace/devel/.private/onrobot/cmake.lock /home/devlab/demo/catkin_workspace/devel/./cmake.lock

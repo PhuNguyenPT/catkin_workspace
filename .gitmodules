@@ -9,7 +9,7 @@
 	url = https://github.com/PhuNguyenPT/universal_robot.git
 [submodule "src/ur_msgs"]
 	path = src/ur_msgs
-	url = https://github.com/PhuNguyenPT/ur_msgs.git,
+	url = https://github.com/PhuNguyenPT/ur_msgs.git
 [submodule "src/onrobot"]
 	path = src/onrobot
 	url = https://github.com/PhuNguyenPT/onrobot.git
@@ -19,3 +19,9 @@
 [submodule "src/ros_industrial_cmake_boilerplate"]
 	path = src/ros_industrial_cmake_boilerplate
 	url = https://github.com/PhuNguyenPT/ros_industrial_cmake_boilerplate.git
+[submodule "src/stomp_ros"]
+	path = src/stomp_ros
+	url = https://github.com/PhuNguyenPT/stomp_ros.git
+[submodule "src/stomp"]
+	path = src/stomp
+	url = https://github.com/PhuNguyenPT/stomp.git
