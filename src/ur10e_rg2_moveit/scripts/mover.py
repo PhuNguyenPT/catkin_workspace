@@ -43,6 +43,10 @@ def plan_trajectory(move_group, destination_pose, start_joint_angles):
     move_group.set_start_state(moveit_robot_state)
 
     move_group.set_pose_target(destination_pose)
+    
+    # Set planning time limit to 10 seconds
+    move_group.set_planning_time(20.0)
+    
     plan = move_group.plan()
 
     if not plan:

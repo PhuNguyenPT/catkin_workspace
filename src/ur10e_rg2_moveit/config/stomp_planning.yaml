@@ -1,8 +1,8 @@
 stomp/arm:
   group_name: arm
   optimization:
-    num_timesteps: 60
-    num_iterations: 40
+    num_timesteps: 300
+    num_iterations: 200
     num_iterations_after_valid: 0
     num_rollouts: 30
     max_rollouts: 30
