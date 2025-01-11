@@ -20,7 +20,7 @@ from moveit_commander.conversions import pose_to_list
 
 from ur10e_rg2_moveit.srv import MoverService, MoverServiceRequest, MoverServiceResponse
 
-joint_names = ['joint_1', 'joint_2', 'joint_3', 'joint_4', 'joint_5', 'joint_6']
+joint_names = ['robot_shoulder_pan_joint', 'robot_shoulder_lift_joint', 'robot_elbow_joint', 'robot_wrist_1_joint', 'robot_wrist_2_joint', 'robot_wrist_3_joint']
 
 # Between Melodic and Noetic, the return type of plan() changed. moveit_commander has no __version__ variable, so checking the python version as a proxy
 if sys.version_info >= (3, 0):
