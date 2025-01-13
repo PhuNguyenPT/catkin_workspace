@@ -33,7 +33,27 @@ else:
 """
     Given the start angles of the robot, plan a trajectory that ends at the destination pose.
 """
-def plan_trajectory(move_group, destination_pose, start_joint_angles): 
+def plan_trajectory(move_group, destination_pose, start_joint_angles, 
+                    max_retries=3, initial_timeout=20.0, timeout_increment=2.0):
+    """
+    Plan a trajectory to a given destination_pose starting from start_joint_angles,
+    with retries and dynamic timeout.
+
+    Args:
+        move_group (MoveGroupCommander): The MoveGroupCommander instance for planning.
+        destination_pose (geometry_msgs.msg.Pose): The target pose.
+        start_joint_angles (list): Starting joint angles.
+        max_retries (int): Maximum number of retries for planning.
+        initial_timeout (float): Initial planning timeout in seconds.
+        timeout_increment (float): Increment in timeout for each retry.
+
+    Returns:
+        moveit_commander.RobotTrajectory: The planned trajectory.
+    
+    Raises:
+        Exception: If planning fails after all retries.
+    """
+    # Initialize the current joint state
     current_joint_state = JointState()
     current_joint_state.name = joint_names
     current_joint_state.position = start_joint_angles
@@ -41,22 +61,59 @@ def plan_trajectory(move_group, destination_pose, start_joint_angles):
     moveit_robot_state = RobotState()
     moveit_robot_state.joint_state = current_joint_state
     move_group.set_start_state(moveit_robot_state)
-
     move_group.set_pose_target(destination_pose)
-    
-    # Set planning time limit
-    move_group.set_planning_time(120.0)
-    
-    plan = move_group.plan()
 
-    if not plan:
-        exception_str = """
-            Trajectory could not be planned for a destination of {} with starting joint angles {}.
-            Please make sure target and destination are reachable by the robot.
-        """.format(destination_pose, destination_pose)
-        raise Exception(exception_str)
+    # Retry mechanism with dynamic timeout
+    timeout_seconds = initial_timeout
+    for attempt in range(max_retries):
+        rospy.loginfo(f"Attempt {attempt + 1} of {max_retries} to plan trajectory.")
+        rospy.loginfo(f"Setting planning timeout to {timeout_seconds} seconds.")
+        
+        move_group.set_planning_time(timeout_seconds)
+        plan = move_group.plan()
 
-    return planCompat(plan)
+        if plan:  # Check if a valid plan was generated
+            planned_trajectory = planCompat(plan)  # Process the plan using planCompat
+            if hasattr(planned_trajectory, 'joint_trajectory') and planned_trajectory.joint_trajectory.points:
+                rospy.loginfo("Trajectory planning succeeded.")
+                return planned_trajectory  # Return the valid planned trajectory
+
+        rospy.logwarn(f"Attempt {attempt + 1} failed. Increasing timeout and retrying...")
+        timeout_seconds += timeout_increment  # Increment timeout for the next attempt
+
+    # Raise an exception if all retries fail
+    exception_str = (
+        f"Trajectory could not be planned after {max_retries} attempts.\n"
+        f"Destination pose: {destination_pose}, starting joint angles: {start_joint_angles}.\n"
+        "Please make sure the target and destination are reachable by the robot."
+    )
+    rospy.logerr(exception_str)
+    raise Exception(exception_str)
+
+# def plan_trajectory(move_group, destination_pose, start_joint_angles): 
+#     current_joint_state = JointState()
+#     current_joint_state.name = joint_names
+#     current_joint_state.position = start_joint_angles
+
+#     moveit_robot_state = RobotState()
+#     moveit_robot_state.joint_state = current_joint_state
+#     move_group.set_start_state(moveit_robot_state)
+
+#     move_group.set_pose_target(destination_pose)
+    
+#     # Set planning time limit
+#     move_group.set_planning_time(10.0)
+    
+#     plan = move_group.plan()
+
+#     if not plan:
+#         exception_str = """
+#             Trajectory could not be planned for a destination of {} with starting joint angles {}.
+#             Please make sure target and destination are reachable by the robot.
+#         """.format(destination_pose, destination_pose)
+#         raise Exception(exception_str)
+
+#     return planCompat(plan)
 
 
 """
@@ -81,48 +138,96 @@ def plan_pick_and_place(req):
 
     current_robot_joint_configuration = req.joints_input.joints
 
-    # Pre grasp - position gripper directly above target object
-    pre_grasp_pose = plan_trajectory(move_group, req.pick_pose, current_robot_joint_configuration)
-    
-    # If the trajectory has no points, planning has failed and we return an empty response
-    if not pre_grasp_pose.joint_trajectory.points:
+    def log_and_fail(stage, error_message):
+        rospy.logerr(f"Failed to plan {stage} trajectory: {error_message}")
         return response
 
-    previous_ending_joint_angles = pre_grasp_pose.joint_trajectory.points[-1].positions
+    try:
+        # Pre-Grasp - position gripper above the target
+        pre_grasp_pose = plan_trajectory(move_group, req.pick_pose, current_robot_joint_configuration)
+        previous_ending_joint_angles = pre_grasp_pose.joint_trajectory.points[-1].positions
 
-    # Grasp - lower gripper so that fingers are on either side of object
-    pick_pose = copy.deepcopy(req.pick_pose)
-    pick_pose.position.z -= 0.05  # Static value coming from Unity, TODO: pass along with request
-    grasp_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
-    
-    if not grasp_pose.joint_trajectory.points:
-        return response
+        # Grasp - lower gripper to grasp the object
+        pick_pose = copy.deepcopy(req.pick_pose)
+        pick_pose.position.z -= 0.05  # Static value; consider passing dynamically
+        grasp_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
+        previous_ending_joint_angles = grasp_pose.joint_trajectory.points[-1].positions
 
-    previous_ending_joint_angles = grasp_pose.joint_trajectory.points[-1].positions
+        # Pick Up - raise gripper back to the pre-grasp position
+        pick_up_pose = plan_trajectory(move_group, req.pick_pose, previous_ending_joint_angles)
+        previous_ending_joint_angles = pick_up_pose.joint_trajectory.points[-1].positions
 
-    # Pick Up - raise gripper back to the pre grasp position
-    pick_up_pose = plan_trajectory(move_group, req.pick_pose, previous_ending_joint_angles)
-    
-    if not pick_up_pose.joint_trajectory.points:
-        return response
+        # Place - move gripper to the desired placement position
+        place_pose = plan_trajectory(move_group, req.place_pose, previous_ending_joint_angles)
 
-    previous_ending_joint_angles = pick_up_pose.joint_trajectory.points[-1].positions
+        # Append all successful trajectories to the response
+        response.trajectories.append(pre_grasp_pose)
+        response.trajectories.append(grasp_pose)
+        response.trajectories.append(pick_up_pose)
+        response.trajectories.append(place_pose)
 
-    # Place - move gripper to desired placement position
-    place_pose = plan_trajectory(move_group, req.place_pose, previous_ending_joint_angles)
+    except Exception as e:
+        # Handle errors from `plan_trajectory` or other stages
+        return log_and_fail("unknown", str(e))
 
-    if not place_pose.joint_trajectory.points:
-        return response
-
-    # If trajectory planning worked for all pick and place stages, add plan to response
-    response.trajectories.append(pre_grasp_pose)
-    response.trajectories.append(grasp_pose)
-    response.trajectories.append(pick_up_pose)
-    response.trajectories.append(place_pose)
-
-    move_group.clear_pose_targets()
+    finally:
+        # Clear targets to ensure no lingering state in the MoveGroupCommander
+        move_group.clear_pose_targets()
 
     return response
+
+# def plan_pick_and_place(req):
+#     response = MoverServiceResponse()
+
+#     group_name = "arm"
+#     move_group = moveit_commander.MoveGroupCommander(group_name)
+
+#     current_robot_joint_configuration = req.joints_input.joints
+
+#     # Pre grasp - position gripper directly above target object
+#     pre_grasp_pose = plan_trajectory(move_group, req.pick_pose, current_robot_joint_configuration)
+    
+#     # If the trajectory has no points, planning has failed and we return an empty response
+#     if not pre_grasp_pose.joint_trajectory.points:
+#         rospy.logerr("Failed to plan pre-grasp trajectory")
+#         response.error_message = "Pre-grasp trajectory planning failed."
+#         return response
+
+#     previous_ending_joint_angles = pre_grasp_pose.joint_trajectory.points[-1].positions
+
+#     # Grasp - lower gripper so that fingers are on either side of object
+#     pick_pose = copy.deepcopy(req.pick_pose)
+#     pick_pose.position.z -= 0.05  # Static value coming from Unity, TODO: pass along with request
+#     grasp_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
+    
+#     if not grasp_pose.joint_trajectory.points:
+#         return response
+
+#     previous_ending_joint_angles = grasp_pose.joint_trajectory.points[-1].positions
+
+#     # Pick Up - raise gripper back to the pre grasp position
+#     pick_up_pose = plan_trajectory(move_group, req.pick_pose, previous_ending_joint_angles)
+    
+#     if not pick_up_pose.joint_trajectory.points:
+#         return response
+
+#     previous_ending_joint_angles = pick_up_pose.joint_trajectory.points[-1].positions
+
+#     # Place - move gripper to desired placement position
+#     place_pose = plan_trajectory(move_group, req.place_pose, previous_ending_joint_angles)
+
+#     if not place_pose.joint_trajectory.points:
+#         return response
+
+#     # If trajectory planning worked for all pick and place stages, add plan to response
+#     response.trajectories.append(pre_grasp_pose)
+#     response.trajectories.append(grasp_pose)
+#     response.trajectories.append(pick_up_pose)
+#     response.trajectories.append(place_pose)
+
+#     move_group.clear_pose_targets()
+
+#     return response
 
 
 def moveit_server():
