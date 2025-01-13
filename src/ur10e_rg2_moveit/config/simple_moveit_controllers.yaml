@@ -16,4 +16,3 @@ controller_list:
     default: True
     joints:
       - gripper_finger_joint
-      - gripper_right_outer_knuckle_joint

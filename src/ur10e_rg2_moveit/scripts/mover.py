@@ -8,6 +8,7 @@ import sys
 import copy
 import math
 import moveit_commander
+import tf
 
 import moveit_msgs.msg
 from moveit_msgs.msg import Constraints, JointConstraint, PositionConstraint, OrientationConstraint, BoundingVolume
@@ -34,7 +35,7 @@ else:
     Given the start angles of the robot, plan a trajectory that ends at the destination pose.
 """
 def plan_trajectory(move_group, destination_pose, start_joint_angles, 
-                    max_retries=3, initial_timeout=20.0, timeout_increment=2.0):
+                    max_retries=3, initial_timeout=20.0, timeout_increment=5.0):
     """
     Plan a trajectory to a given destination_pose starting from start_joint_angles,
     with retries and dynamic timeout.
@@ -61,6 +62,7 @@ def plan_trajectory(move_group, destination_pose, start_joint_angles,
     moveit_robot_state = RobotState()
     moveit_robot_state.joint_state = current_joint_state
     move_group.set_start_state(moveit_robot_state)
+    destination_pose.position.y = -destination_pose.position.y
     move_group.set_pose_target(destination_pose)
 
     # Retry mechanism with dynamic timeout
@@ -130,41 +132,89 @@ def plan_trajectory(move_group, destination_pose, start_joint_angles,
 
     https://github.com/ros-planning/moveit/blob/master/moveit_commander/src/moveit_commander/move_group.py
 """
+def log_pose(pose, label="Pose"):
+    # ROS position
+    ros_position = pose.position
+    rospy.loginfo(f"{label} - ROS Position: x={ros_position.x}, y={ros_position.y}, z={ros_position.z}")
+
+    # # ROS to Unity coordinate transformation (swap X and Z, negate X)
+    # unity_position = geometry_msgs.msg.Point()
+    # unity_position.x = -pose.position.y
+    # unity_position.y = pose.position.z
+    # unity_position.z = pose.position.x 
+
+    # # Log the position in Unity coordinates (in meters)
+    # rospy.loginfo(f"{label} - Unity Position: x={unity_position.x}, y={unity_position.y}, z={unity_position.z}")
+
+    # # Convert quaternion orientation to Euler angles (roll, pitch, yaw) in degrees
+    # orientation = pose.orientation
+    # euler = tf.transformations.euler_from_quaternion([orientation.x, orientation.y, orientation.z, orientation.w])
+    # roll_deg, pitch_deg, yaw_deg = map(math.degrees, euler)  # Convert radians to degrees
+
+    # rospy.loginfo(f"{label} - Orientation (Euler Angles in Degrees): roll={roll_deg}, pitch={pitch_deg}, yaw={yaw_deg}")
+    
 def plan_pick_and_place(req):
     response = MoverServiceResponse()
 
     group_name = "arm"
     move_group = moveit_commander.MoveGroupCommander(group_name)
-
+    
     current_robot_joint_configuration = req.joints_input.joints
-
+    rospy.loginfo(f"Current Robot Joint Configuration: {current_robot_joint_configuration}")
+    
+    current_pose = move_group.get_current_pose()
+    rospy.loginfo("Current pose: {current_pose}")
+    
     def log_and_fail(stage, error_message):
         rospy.logerr(f"Failed to plan {stage} trajectory: {error_message}")
         return response
 
     try:
-        # Pre-Grasp - position gripper above the target
-        pre_grasp_pose = plan_trajectory(move_group, req.pick_pose, current_robot_joint_configuration)
-        previous_ending_joint_angles = pre_grasp_pose.joint_trajectory.points[-1].positions
+        # Pre-Grasp - position gripper above the target   
+        # current_pose.pose.position.x = current_pose.pose.position.x - 0.1
+        # current_pose.pose.position.y = current_pose.pose.position.y - 0.1
+        # current_pose.pose.position.z = current_pose.pose.position.z - 0.1
+        rospy.loginfo("Pre-Grasp Pose:")
+        log_pose(req.pick_pose, label="Pre-Grasp Pose")
+        
+        current_joint_values = move_group.get_current_joint_values()
+        rospy.loginfo(f"Current Joint Values: {current_joint_values}")
+        pre_grasp_pose = plan_trajectory(move_group, 
+                                        # current_pose
+                                        req.pick_pose
+                                         , 
+                                        #  current_joint_values
+                                        current_robot_joint_configuration
+                                         )
+        # previous_ending_joint_angles = pre_grasp_pose.joint_trajectory.points[-1].positions
 
-        # Grasp - lower gripper to grasp the object
-        pick_pose = copy.deepcopy(req.pick_pose)
-        pick_pose.position.z -= 0.05  # Static value; consider passing dynamically
-        grasp_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
-        previous_ending_joint_angles = grasp_pose.joint_trajectory.points[-1].positions
+        # # Grasp - lower gripper to grasp the object
+        # pick_pose = copy.deepcopy(req.pick_pose)
+        # pick_pose.position.z -= 0.05  # Static value; consider passing dynamically
+        
+        # rospy.loginfo("Grasp Pose:")
+        # log_pose(pick_pose, label="Grasp Pose")
+        
+        # grasp_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
+        # previous_ending_joint_angles = grasp_pose.joint_trajectory.points[-1].positions
 
-        # Pick Up - raise gripper back to the pre-grasp position
-        pick_up_pose = plan_trajectory(move_group, req.pick_pose, previous_ending_joint_angles)
-        previous_ending_joint_angles = pick_up_pose.joint_trajectory.points[-1].positions
+        # # Pick Up - raise gripper back to the pre-grasp position
+        # rospy.loginfo("Pick-Up Pose:")
+        # log_pose(req.pick_pose, label="Pick-Up Pose")
+        
+        # pick_up_pose = plan_trajectory(move_group, req.pick_pose, previous_ending_joint_angles)
+        # previous_ending_joint_angles = pick_up_pose.joint_trajectory.points[-1].positions
 
-        # Place - move gripper to the desired placement position
-        place_pose = plan_trajectory(move_group, req.place_pose, previous_ending_joint_angles)
+        # # Place - move gripper to the desired placement position
+        # rospy.loginfo("Place Pose:")
+        # log_pose(req.place_pose, label="Place Pose")
+        # place_pose = plan_trajectory(move_group, req.place_pose, previous_ending_joint_angles)
 
         # Append all successful trajectories to the response
         response.trajectories.append(pre_grasp_pose)
-        response.trajectories.append(grasp_pose)
-        response.trajectories.append(pick_up_pose)
-        response.trajectories.append(place_pose)
+        # response.trajectories.append(grasp_pose)
+        # response.trajectories.append(pick_up_pose)
+        # response.trajectories.append(place_pose)
 
     except Exception as e:
         # Handle errors from `plan_trajectory` or other stages
@@ -174,6 +224,7 @@ def plan_pick_and_place(req):
         # Clear targets to ensure no lingering state in the MoveGroupCommander
         move_group.clear_pose_targets()
 
+    rospy.loginfo(f"response: {response.trajectories}")
     return response
 
 # def plan_pick_and_place(req):
@@ -235,9 +286,9 @@ def moveit_server():
     rospy.init_node('ur10e_rg2_moveit_server')
 
     s = rospy.Service('ur10e_rg2_moveit', MoverService, plan_pick_and_place)
+    # plan_pick_and_place()
     print("Ready to plan")
     rospy.spin()
-
 
 if __name__ == "__main__":
     moveit_server()
